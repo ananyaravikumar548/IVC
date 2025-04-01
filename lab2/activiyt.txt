@@ -1,0 +1,111 @@
+Task 1-->
+git init ProjectRepo.
+echo ".log" >>.gitignore
+git add .gitignore
+git commit -m "to ignore .log files"
+git remote add origin https://github.com/username/ProjectRepo.git
+
+Task 2-->
+git checkout -b development
+git checkout development
+echo "Initial development notes" > dev_notes.txt
+git add dev_notes.txt
+git commit -m "Add dev_notes.txt "
+git push origin development
+
+Task 3-->
+git checkout development
+echo "More detailed development notes" >> dev_notes.txt
+git add dev_notes.txt
+git commit -m "Update dev_notes.txt "
+
+git checkout main
+echo "Updates from main branch" >> dev_notes.txt
+git add dev_notes.txt
+git commit -m "Update dev_notes.txt main branch"
+git merge development
+git push origin main
+
+Task 4-->
+git checkout main
+echo "This line contains an error" >> dev_notes.txt
+git add dev_notes.txt
+git commit -m " error in dev_notes.txt"
+git log
+git revert 
+git push origin main
+
+Task 1-->
+git init project
+echo "project objectives." > README.md
+git add README.md
+git commit -m " README.md with project objectives"
+
+Task 2-->
+git branch development
+git checkout development
+echo "Development Guidelines." > dev_notes.txt
+git add dev_notes.txt
+git commit -m "Add development notes"
+
+Task 3-->
+git checkout development
+git branch feature1
+git checkout feature1
+echo "implementation details" >> dev_notes.txt
+git add dev_notes.txt
+git commit -m "Feature 1 implementation details"
+git checkout development
+git merge feature1
+git add dev_notes.txt
+git commit -m "Resolve merge conflict "
+
+Task 4-->
+git checkout development
+echo "Temporary  notes" >> dev_notes.txt
+git stash
+git checkout main
+echo "information" >> README.md
+git add README.md
+git commit -m "Add contribution guidelines to README.md
+git checkout development
+git stash apply
+
+EXCERCISE 3-->
+git clone https://github.com/your-username/API-development.git
+cd API-development
+git checkout -b bug-fix
+git add error_log.txt
+git commit -m "Correct spelling and formatting errors in error_log.txt"
+git push origin bug-fix
+
+EXCERCISE 4-->
+git checkout feature-x
+echo "Initial notes " > new_feature.md
+git stash save "Work on new_feature.md"
+git checkout development
+echo "Urgent fix applied" > urgent_fix.txt
+git add urgent_fix.txt
+git commit -m " urgent fix"
+git checkout feature-x
+git stash pop
+echo "More detailed notes on the new feature" >> new_feature.md
+git add new_feature.md
+git commit -m "more details added"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
